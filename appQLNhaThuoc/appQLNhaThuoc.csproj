@@ -1,0 +1,813 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{979FCFB7-2F9E-4664-BC1D-CA419590D545}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>appQLNhaThuoc</RootNamespace>
+    <AssemblyName>appQLNhaThuoc</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DatabaseObj.cs" />
+    <Compile Include="Form_view\Form_control\frm_control_BanHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_control\frm_control_BanHang.Designer.cs">
+      <DependentUpon>frm_control_BanHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_control\frm_control_BaoCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_control\frm_control_BaoCao.Designer.cs">
+      <DependentUpon>frm_control_BaoCao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_control\frm_control_DanhMuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_control\frm_control_DanhMuc.Designer.cs">
+      <DependentUpon>frm_control_DanhMuc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_control\frm_control_HeThong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_control\frm_control_HeThong.Designer.cs">
+      <DependentUpon>frm_control_HeThong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_control\frm_control_KhoHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_control\frm_control_KhoHang.Designer.cs">
+      <DependentUpon>frm_control_KhoHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_BanHang\Form_child_function\frm_moRong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_BanHang\Form_child_function\frm_moRong.Designer.cs">
+      <DependentUpon>frm_moRong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_BanHang\frm_mangHinhTinhTien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_BanHang\frm_mangHinhTinhTien.Designer.cs">
+      <DependentUpon>frm_mangHinhTinhTien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_BanHang\frm_QLHangBang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_BanHang\frm_QLHangBang.Designer.cs">
+      <DependentUpon>frm_QLHangBang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_BanHang\frm_QLHoaDonBanLe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_BanHang\frm_QLHoaDonBanLe.Designer.cs">
+      <DependentUpon>frm_QLHoaDonBanLe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Dang_khuyen_mai\frm_childSuaDKM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Dang_khuyen_mai\frm_childSuaDKM.Designer.cs">
+      <DependentUpon>frm_childSuaDKM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Dang_khuyen_mai\frm_childThemDKM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Dang_khuyen_mai\frm_childThemDKM.Designer.cs">
+      <DependentUpon>frm_childThemDKM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Dang_khuyen_mai\frm_childXoaDKM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Dang_khuyen_mai\frm_childXoaDKM.Designer.cs">
+      <DependentUpon>frm_childXoaDKM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Don_Gia_Hang\frm_childSuaDGH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Don_Gia_Hang\frm_childSuaDGH.Designer.cs">
+      <DependentUpon>frm_childSuaDGH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Don_Gia_Hang\frm_childThemDGH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Don_Gia_Hang\frm_childThemDGH.Designer.cs">
+      <DependentUpon>frm_childThemDGH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Don_Gia_Hang\frm_childXoaDGH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Don_Gia_Hang\frm_childXoaDGH.Designer.cs">
+      <DependentUpon>frm_childXoaDGH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Don_Vi_Tinh\frm_childSuaDVT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Don_Vi_Tinh\frm_childSuaDVT.Designer.cs">
+      <DependentUpon>frm_childSuaDVT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Don_Vi_Tinh\frm_childThemDVT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Don_Vi_Tinh\frm_childThemDVT.Designer.cs">
+      <DependentUpon>frm_childThemDVT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Don_Vi_Tinh\frm_childXoaDVT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Don_Vi_Tinh\frm_childXoaDVT.Designer.cs">
+      <DependentUpon>frm_childXoaDVT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Hang_Duoc_Pham\frm_childSuaHDP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Hang_Duoc_Pham\frm_childSuaHDP.Designer.cs">
+      <DependentUpon>frm_childSuaHDP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Hang_Duoc_Pham\frm_childThemHDP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Hang_Duoc_Pham\frm_childThemHDP.Designer.cs">
+      <DependentUpon>frm_childThemHDP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Hang_Duoc_Pham\frm_childXoaHDP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Hang_Duoc_Pham\frm_childXoaHDP.Designer.cs">
+      <DependentUpon>frm_childXoaHDP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Hinh_Thuc_Thanh_Toan\frm_childSuaHTTT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Hinh_Thuc_Thanh_Toan\frm_childSuaHTTT.Designer.cs">
+      <DependentUpon>frm_childSuaHTTT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Hinh_Thuc_Thanh_Toan\frm_childThemHTTT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Hinh_Thuc_Thanh_Toan\frm_childThemHTTT.Designer.cs">
+      <DependentUpon>frm_childThemHTTT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Hinh_Thuc_Thanh_Toan\frm_childXoaHTTT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Hinh_Thuc_Thanh_Toan\frm_childXoaHTTT.Designer.cs">
+      <DependentUpon>frm_childXoaHTTT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Khach_Hang\frm_childSuaKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Khach_Hang\frm_childSuaKH.Designer.cs">
+      <DependentUpon>frm_childSuaKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Khach_Hang\frm_childThemKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Khach_Hang\frm_childThemKH.Designer.cs">
+      <DependentUpon>frm_childThemKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Khach_Hang\frm_childXoaKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Khach_Hang\frm_childXoaKH.Designer.cs">
+      <DependentUpon>frm_childXoaKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Khuyen_mai\frm_childSuaKM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Khuyen_mai\frm_childSuaKM.Designer.cs">
+      <DependentUpon>frm_childSuaKM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Khuyen_mai\frm_childThemKM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Khuyen_mai\frm_childThemKM.Designer.cs">
+      <DependentUpon>frm_childThemKM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Khuyen_mai\frm_childXoaKM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Khuyen_mai\frm_childXoaKM.Designer.cs">
+      <DependentUpon>frm_childXoaKM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Lo_Thuoc\frm_childSuaLT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Lo_Thuoc\frm_childSuaLT.Designer.cs">
+      <DependentUpon>frm_childSuaLT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Lo_Thuoc\frm_childThemLT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Lo_Thuoc\frm_childThemLT.Designer.cs">
+      <DependentUpon>frm_childThemLT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Lo_Thuoc\frm_childXoaLT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Lo_Thuoc\frm_childXoaLT.Designer.cs">
+      <DependentUpon>frm_childXoaLT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Nhan_Vien\frm_childSuaNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Nhan_Vien\frm_childSuaNV.Designer.cs">
+      <DependentUpon>frm_childSuaNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Nhan_Vien\frm_childThemNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Nhan_Vien\frm_childThemNV.Designer.cs">
+      <DependentUpon>frm_childThemNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Nhan_Vien\frm_childXoaNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Nhan_Vien\frm_childXoaNV.Designer.cs">
+      <DependentUpon>frm_childXoaNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Nha_Cung_Cap\frm_childSuaNCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Nha_Cung_Cap\frm_childSuaNCC.Designer.cs">
+      <DependentUpon>frm_childSuaNCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Nha_Cung_Cap\frm_childThemNCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Nha_Cung_Cap\frm_childThemNCC.Designer.cs">
+      <DependentUpon>frm_childThemNCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Nha_Cung_Cap\frm_childXoaNCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Nha_Cung_Cap\frm_childXoaNCC.Designer.cs">
+      <DependentUpon>frm_childXoaNCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Nhom_thuoc\frm_childSuaNT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Nhom_thuoc\frm_childSuaNT.Designer.cs">
+      <DependentUpon>frm_childSuaNT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Nhom_thuoc\frm_childThemNT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Nhom_thuoc\frm_childThemNT.Designer.cs">
+      <DependentUpon>frm_childThemNT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Nhom_thuoc\frm_childXoaNT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Nhom_thuoc\frm_childXoaNT.Designer.cs">
+      <DependentUpon>frm_childXoaNT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Thuoc_child\frm_childThemThuo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Thuoc_child\frm_childThemThuo.Designer.cs">
+      <DependentUpon>frm_childThemThuo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Thuoc_child\frm_childSuaThuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Thuoc_child\frm_childSuaThuoc.Designer.cs">
+      <DependentUpon>frm_childSuaThuoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Thuoc_child\frm_childXoaThuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\Form_child_function\Thuoc_child\frm_childXoaThuoc.Designer.cs">
+      <DependentUpon>frm_childXoaThuoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\frm_QLGiaBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\frm_QLGiaBan.Designer.cs">
+      <DependentUpon>frm_QLGiaBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_HeThong\frm_editUserProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_HeThong\frm_editUserProfile.Designer.cs">
+      <DependentUpon>frm_editUserProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_HeThong\frm_loginUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_HeThong\frm_loginUser.Designer.cs">
+      <DependentUpon>frm_loginUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\frm_QLDangKhuyenMai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\frm_QLDangKhuyenMai.Designer.cs">
+      <DependentUpon>frm_QLDangKhuyenMai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\frm_QLDonViTinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\frm_QLDonViTinh.Designer.cs">
+      <DependentUpon>frm_QLDonViTinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\frm_QLHangDuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\frm_QLHangDuoc.Designer.cs">
+      <DependentUpon>frm_QLHangDuoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\frm_QLHinhThucThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\frm_QLHinhThucThanhToan.Designer.cs">
+      <DependentUpon>frm_QLHinhThucThanhToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\frm_QLKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\frm_QLKhachHang.Designer.cs">
+      <DependentUpon>frm_QLKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\frm_QLKhuyenMai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\frm_QLKhuyenMai.Designer.cs">
+      <DependentUpon>frm_QLKhuyenMai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\frm_QLLoThuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\frm_QLLoThuoc.Designer.cs">
+      <DependentUpon>frm_QLLoThuoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\frm_QLNhaCungCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\frm_QLNhaCungCap.Designer.cs">
+      <DependentUpon>frm_QLNhaCungCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\frm_QLNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\frm_QLNhanVien.Designer.cs">
+      <DependentUpon>frm_QLNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\frm_QLNhomThuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\frm_QLNhomThuoc.Designer.cs">
+      <DependentUpon>frm_QLNhomThuoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\frm_QlThuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_DanhMuc\frm_QlThuoc.Designer.cs">
+      <DependentUpon>frm_QlThuoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_HeThong\frm_PhanQuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_HeThong\frm_PhanQuyen.Designer.cs">
+      <DependentUpon>frm_PhanQuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_HeThong\frm_phucHoiDL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_HeThong\frm_phucHoiDL.Designer.cs">
+      <DependentUpon>frm_phucHoiDL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_HeThong\frm_sauLuuDL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_HeThong\frm_sauLuuDL.Designer.cs">
+      <DependentUpon>frm_sauLuuDL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_HeThong\frm_thongTinNhaThuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_HeThong\frm_thongTinNhaThuoc.Designer.cs">
+      <DependentUpon>frm_thongTinNhaThuoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_HeThong\frm_QLNhatKyHeThong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_HeThong\frm_QLNhatKyHeThong.Designer.cs">
+      <DependentUpon>frm_QLNhatKyHeThong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_KhoHang\Form_child_function\frm_childChiTietNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_KhoHang\Form_child_function\frm_childChiTietNhap.Designer.cs">
+      <DependentUpon>frm_childChiTietNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_KhoHang\Form_child_function\frm_childChiTietXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_KhoHang\Form_child_function\frm_childChiTietXuat.Designer.cs">
+      <DependentUpon>frm_childChiTietXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_KhoHang\frm_QLNhapKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_KhoHang\frm_QLNhapKho.Designer.cs">
+      <DependentUpon>frm_QLNhapKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_KhoHang\frm_QLPhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_KhoHang\frm_QLPhieuNhap.Designer.cs">
+      <DependentUpon>frm_QLPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_KhoHang\frm_QLPhieuXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_KhoHang\frm_QLPhieuXuat.Designer.cs">
+      <DependentUpon>frm_QLPhieuXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_KhoHang\frm_QLTinhTrangHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_KhoHang\frm_QLTinhTrangHang.Designer.cs">
+      <DependentUpon>frm_QLTinhTrangHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_view\Form_function_KhoHang\frm_QLXuatKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_view\Form_function_KhoHang\frm_QLXuatKho.Designer.cs">
+      <DependentUpon>frm_QLXuatKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_home.Designer.cs">
+      <DependentUpon>frm_home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Function_middleware\MaHoa.cs" />
+    <Compile Include="Function_middleware\XoaDauTiengViet.cs" />
+    <Compile Include="Obj_Model\BangTam.cs" />
+    <Compile Include="Obj_Model\DangKhuyenMai.cs" />
+    <Compile Include="Obj_Model\DangThanhToan.cs" />
+    <Compile Include="Obj_Model\DonViTinh.cs" />
+    <Compile Include="Obj_Model\GiaDonHang.cs" />
+    <Compile Include="Obj_Model\HangDuocPham.cs" />
+    <Compile Include="Obj_Model\HeThong.cs" />
+    <Compile Include="Obj_Model\HoaDon.cs" />
+    <Compile Include="Obj_Model\KhachHang.cs" />
+    <Compile Include="Obj_Model\Kho.cs" />
+    <Compile Include="Obj_Model\KhuyenMai.cs" />
+    <Compile Include="Obj_Model\LoThuoc.cs" />
+    <Compile Include="Obj_Model\NhaCungCap.cs" />
+    <Compile Include="Obj_Model\NhanVien.cs" />
+    <Compile Include="Obj_Model\NhaThuoc.cs" />
+    <Compile Include="Obj_Model\NhatKyHeThong.cs" />
+    <Compile Include="Obj_Model\NhomThuoc.cs" />
+    <Compile Include="Obj_Model\PhieuNhapKho.cs" />
+    <Compile Include="Obj_Model\PhieuXuatKho.cs" />
+    <Compile Include="Obj_Model\Thuoc.cs" />
+    <Compile Include="Obj_Model\User.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLNhaThuocDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLNhaThuocDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VBButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="Form_view\Form_control\frm_control_BanHang.resx">
+      <DependentUpon>frm_control_BanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_control\frm_control_BaoCao.resx">
+      <DependentUpon>frm_control_BaoCao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_control\frm_control_DanhMuc.resx">
+      <DependentUpon>frm_control_DanhMuc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_control\frm_control_HeThong.resx">
+      <DependentUpon>frm_control_HeThong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_control\frm_control_KhoHang.resx">
+      <DependentUpon>frm_control_KhoHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_BanHang\Form_child_function\frm_moRong.resx">
+      <DependentUpon>frm_moRong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_BanHang\frm_mangHinhTinhTien.resx">
+      <DependentUpon>frm_mangHinhTinhTien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_BanHang\frm_QLHangBang.resx">
+      <DependentUpon>frm_QLHangBang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_BanHang\frm_QLHoaDonBanLe.resx">
+      <DependentUpon>frm_QLHoaDonBanLe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\Form_child_function\Dang_khuyen_mai\frm_childSuaDKM.resx">
+      <DependentUpon>frm_childSuaDKM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\Form_child_function\Dang_khuyen_mai\frm_childThemDKM.resx">
+      <DependentUpon>frm_childThemDKM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\Form_child_function\Dang_khuyen_mai\frm_childXoaDKM.resx">
+      <DependentUpon>frm_childXoaDKM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\Form_child_function\Don_Gia_Hang\frm_childSuaDGH.resx">
+      <DependentUpon>frm_childSuaDGH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\Form_child_function\Don_Gia_Hang\frm_childThemDGH.resx">
+      <DependentUpon>frm_childThemDGH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\Form_child_function\Don_Gia_Hang\frm_childXoaDGH.resx">
+      <DependentUpon>frm_childXoaDGH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\Form_child_function\Don_Vi_Tinh\frm_childSuaDVT.resx">
+      <DependentUpon>frm_childSuaDVT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\Form_child_function\Don_Vi_Tinh\frm_childThemDVT.resx">
+      <DependentUpon>frm_childThemDVT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\Form_child_function\Don_Vi_Tinh\frm_childXoaDVT.resx">
+      <DependentUpon>frm_childXoaDVT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\Form_child_function\Hang_Duoc_Pham\frm_childSuaHDP.resx">
+      <DependentUpon>frm_childSuaHDP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\Form_child_function\Hang_Duoc_Pham\frm_childThemHDP.resx">
+      <DependentUpon>frm_childThemHDP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\Form_child_function\Hang_Duoc_Pham\frm_childXoaHDP.resx">
+      <DependentUpon>frm_childXoaHDP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\Form_child_function\Hinh_Thuc_Thanh_Toan\frm_childSuaHTTT.resx">
+      <DependentUpon>frm_childSuaHTTT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\Form_child_function\Hinh_Thuc_Thanh_Toan\frm_childThemHTTT.resx">
+      <DependentUpon>frm_childThemHTTT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\Form_child_function\Hinh_Thuc_Thanh_Toan\frm_childXoaHTTT.resx">
+      <DependentUpon>frm_childXoaHTTT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\Form_child_function\Khach_Hang\frm_childSuaKH.resx">
+      <DependentUpon>frm_childSuaKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\Form_child_function\Khach_Hang\frm_childThemKH.resx">
+      <DependentUpon>frm_childThemKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\Form_child_function\Khach_Hang\frm_childXoaKH.resx">
+      <DependentUpon>frm_childXoaKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\Form_child_function\Khuyen_mai\frm_childSuaKM.resx">
+      <DependentUpon>frm_childSuaKM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\Form_child_function\Khuyen_mai\frm_childThemKM.resx">
+      <DependentUpon>frm_childThemKM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\Form_child_function\Khuyen_mai\frm_childXoaKM.resx">
+      <DependentUpon>frm_childXoaKM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\Form_child_function\Lo_Thuoc\frm_childSuaLT.resx">
+      <DependentUpon>frm_childSuaLT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\Form_child_function\Lo_Thuoc\frm_childThemLT.resx">
+      <DependentUpon>frm_childThemLT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\Form_child_function\Lo_Thuoc\frm_childXoaLT.resx">
+      <DependentUpon>frm_childXoaLT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\Form_child_function\Nhan_Vien\frm_childSuaNV.resx">
+      <DependentUpon>frm_childSuaNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\Form_child_function\Nhan_Vien\frm_childThemNV.resx">
+      <DependentUpon>frm_childThemNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\Form_child_function\Nhan_Vien\frm_childXoaNV.resx">
+      <DependentUpon>frm_childXoaNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\Form_child_function\Nha_Cung_Cap\frm_childSuaNCC.resx">
+      <DependentUpon>frm_childSuaNCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\Form_child_function\Nha_Cung_Cap\frm_childThemNCC.resx">
+      <DependentUpon>frm_childThemNCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\Form_child_function\Nha_Cung_Cap\frm_childXoaNCC.resx">
+      <DependentUpon>frm_childXoaNCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\Form_child_function\Nhom_thuoc\frm_childSuaNT.resx">
+      <DependentUpon>frm_childSuaNT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\Form_child_function\Nhom_thuoc\frm_childThemNT.resx">
+      <DependentUpon>frm_childThemNT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\Form_child_function\Nhom_thuoc\frm_childXoaNT.resx">
+      <DependentUpon>frm_childXoaNT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\Form_child_function\Thuoc_child\frm_childThemThuo.resx">
+      <DependentUpon>frm_childThemThuo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\Form_child_function\Thuoc_child\frm_childSuaThuoc.resx">
+      <DependentUpon>frm_childSuaThuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\Form_child_function\Thuoc_child\frm_childXoaThuoc.resx">
+      <DependentUpon>frm_childXoaThuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\frm_QLGiaBan.resx">
+      <DependentUpon>frm_QLGiaBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_HeThong\frm_editUserProfile.resx">
+      <DependentUpon>frm_editUserProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_HeThong\frm_loginUser.resx">
+      <DependentUpon>frm_loginUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\frm_QLDangKhuyenMai.resx">
+      <DependentUpon>frm_QLDangKhuyenMai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\frm_QLDonViTinh.resx">
+      <DependentUpon>frm_QLDonViTinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\frm_QLHangDuoc.resx">
+      <DependentUpon>frm_QLHangDuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\frm_QLHinhThucThanhToan.resx">
+      <DependentUpon>frm_QLHinhThucThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\frm_QLKhachHang.resx">
+      <DependentUpon>frm_QLKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\frm_QLKhuyenMai.resx">
+      <DependentUpon>frm_QLKhuyenMai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\frm_QLLoThuoc.resx">
+      <DependentUpon>frm_QLLoThuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\frm_QLNhaCungCap.resx">
+      <DependentUpon>frm_QLNhaCungCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\frm_QLNhanVien.resx">
+      <DependentUpon>frm_QLNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\frm_QLNhomThuoc.resx">
+      <DependentUpon>frm_QLNhomThuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_DanhMuc\frm_QlThuoc.resx">
+      <DependentUpon>frm_QlThuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_HeThong\frm_PhanQuyen.resx">
+      <DependentUpon>frm_PhanQuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_HeThong\frm_phucHoiDL.resx">
+      <DependentUpon>frm_phucHoiDL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_HeThong\frm_sauLuuDL.resx">
+      <DependentUpon>frm_sauLuuDL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_HeThong\frm_thongTinNhaThuoc.resx">
+      <DependentUpon>frm_thongTinNhaThuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_HeThong\frm_QLNhatKyHeThong.resx">
+      <DependentUpon>frm_QLNhatKyHeThong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_KhoHang\Form_child_function\frm_childChiTietNhap.resx">
+      <DependentUpon>frm_childChiTietNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_KhoHang\Form_child_function\frm_childChiTietXuat.resx">
+      <DependentUpon>frm_childChiTietXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_KhoHang\frm_QLNhapKho.resx">
+      <DependentUpon>frm_QLNhapKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_KhoHang\frm_QLPhieuNhap.resx">
+      <DependentUpon>frm_QLPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_KhoHang\frm_QLPhieuXuat.resx">
+      <DependentUpon>frm_QLPhieuXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_KhoHang\frm_QLTinhTrangHang.resx">
+      <DependentUpon>frm_QLTinhTrangHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_view\Form_function_KhoHang\frm_QLXuatKho.resx">
+      <DependentUpon>frm_QLXuatKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_home.resx">
+      <DependentUpon>frm_home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="QLNhaThuocDataSet.xsc">
+      <DependentUpon>QLNhaThuocDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLNhaThuocDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLNhaThuocDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLNhaThuocDataSet.xss">
+      <DependentUpon>QLNhaThuocDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="icon_image\1024824.png" />
+    <Content Include="icon_image\1076337.png" />
+    <Content Include="icon_image\1312277.png" />
+    <Content Include="icon_image\1698566.png" />
+    <Content Include="icon_image\199-1998454_role-icon-role-based-access-control-icon.png" />
+    <Content Include="icon_image\1995576.png" />
+    <Content Include="icon_image\20210310_073023_278849_Thuoc.max-800x800.ico" />
+    <Content Include="icon_image\20210310_073023_278849_Thuoc.max-800x800.png" />
+    <Content Include="icon_image\2254257.png" />
+    <Content Include="icon_image\2519233.png" />
+    <Content Include="icon_image\2832794.png" />
+    <Content Include="icon_image\2dcb07b478d5a54c5208d99c34c5e66e.jpg" />
+    <Content Include="icon_image\2_%283%29.png" />
+    <Content Include="icon_image\3100252.png" />
+    <Content Include="icon_image\3113165.png" />
+    <Content Include="icon_image\3482505.png" />
+    <Content Include="icon_image\3d_pie_chart.jpg" />
+    <Content Include="icon_image\432992.png" />
+    <Content Include="icon_image\5305244.png" />
+    <Content Include="icon_image\5553901.png" />
+    <Content Include="icon_image\Asset 1.png" />
+    <Content Include="icon_image\Asset 2.png" />
+    <Content Include="icon_image\Bieu-mau5-size-168x168-znd.png" />
+    <Content Include="icon_image\icon-service-2.png" />
+    <Content Include="icon_image\images %281%29.png" />
+    <Content Include="icon_image\images %282%29.png" />
+    <Content Include="icon_image\lua-chon-nha-cung-cap-tiem-nang-cho-doanh-nghiep-cua-ban.jpg" />
+    <Content Include="icon_image\nhat-ky-ca-nhan-for-android.jpg" />
+    <Content Include="icon_image\png-clipart-backup-information-technology-service-data-computer-backup-ico-blue-angle.png" />
+    <Content Include="icon_image\png-transparent-database-logo-backup-backup-and-restore-computer-software-computer-servers-disaster-recovery-user-interface-veeam-backup-replication.png" />
+    <Content Include="icon_image\pngtree-cash-machine-calculator-and-check-vector-icon-png-image_1804314.jpg" />
+    <Content Include="icon_image\pngtree-package-delivered-icon-for-your-project-png-image_1521634.jpg" />
+    <Content Include="icon_image\reseller.jpg" />
+    <Content Include="icon_image\Screenshot 2023-05-19 104153.png" />
+    <Content Include="icon_image\Screenshot 2023-05-19 104208.png" />
+    <Content Include="icon_image\Screenshot 2023-05-19 104239.png" />
+    <Content Include="icon_image\Screenshot 2023-05-19 104250.png" />
+    <Content Include="icon_image\Screenshot 2023-05-19 104313.png" />
+    <Content Include="icon_image\Screenshot 2023-05-19 104327.png" />
+    <Content Include="icon_image\Screenshot 2023-05-19 104351.png" />
+    <Content Include="icon_image\Screenshot 2023-05-19 104404.png" />
+    <Content Include="icon_image\Screenshot 2023-05-19 104418.png" />
+    <Content Include="icon_image\Screenshot 2023-05-19 104430.png" />
+    <Content Include="icon_image\Screenshot 2023-05-19 104437.png" />
+    <Content Include="icon_image\Screenshot 2023-05-19 111137.png" />
+    <Content Include="icon_image\tải xuống %281%29.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
